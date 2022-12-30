@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+a {
+    text-align: center;
+}
+
+.navbar-nav .nav-item a:hover{
+    background: linear-gradient(135deg, #5d0872, #a38753);
+    border: 1px solid black;
+    color: white;
+}
+
+.jobform {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}

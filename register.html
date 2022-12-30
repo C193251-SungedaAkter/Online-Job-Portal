@@ -23,8 +23,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                          </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
@@ -32,13 +32,10 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="joblist.html">Job List</a>
+                            <a class="nav-link" href="login.php">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="register.html">Register</a>
+                            <a class="nav-link active" href="register.html">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -48,57 +45,53 @@
         <div class="container">
             <div class="title">Registration</div>
             <div class="content">
-                <form action="#">
+                <form action="registerinfo.php" method="POST">
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details">Full Name</span>
-                            <input type="text" placeholder="Enter your name" required>
+                            <input type="text" name="fullname" id="fullname" placeholder="Enter your name" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Username</span>
-                            <input type="text" placeholder="Enter your username" required>
+                            <input type="text" name="username" id="username" placeholder="Enter your username" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Email</span>
-                            <input type="text" placeholder="Enter your email" required>
+                            <input type="text" name="email" id="email" placeholder="Enter your email" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Phone Number</span>
-                            <input type="text" placeholder="Enter your number" required>
+                            <input type="text" name="phonenumber" id="phonenumber" placeholder="Enter your number" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Password</span>
-                            <input type="text" placeholder="Enter your password" required>
+                            <input type="text" name="password" id="password" placeholder="Enter your password" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Confirm Password</span>
-                            <input type="text" placeholder="Confirm your password" required>
+                            <input type="text" name="confirmpassword" id="confirmpassword" placeholder="Confirm your password" required>
                         </div>
                     </div>
-                    <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
-                        <span class="gender-title">Gender</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Male</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">Female</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="gender">Prefer not to say</span>
-                            </label>
-                        </div>
+                    <div class="input-box">
+                    <span class="details">Gender</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" value="male" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" value="female" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Female
+                        </label>
+                      </div>
                     </div>
                     <div class="button">
-                        <input type="submit" value="Register">
+                        <button class="btn btn-success" name="submit">Register</button>
                     </div>
                 </form>
+                <p>Have an Account? <a href="login.html"></a>Login</p>
             </div>
         </div>
     <script src="js/jquery-3.6.1.min.js"></script>

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body>
+<body style="background: linear-gradient(135deg, #71b7e6, #9b59b6);">
   <header>
     <nav class="navbar navbar-expand-lg bg-light" id="header-nav">
       <div class="container-fluid">
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
@@ -31,10 +31,7 @@
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="joblist.html">Job List</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
+              <a class="nav-link active" href="login.html">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="register.html">Register</a>
@@ -45,19 +42,20 @@
     </nav>
   </header>
   <div class="login-wrapper">
-    <form action="" class="form">
+    <form action="login.php" class="form" method="POST">
       <img src="img/avatar.png" alt="">
       <h2>Login</h2>
       <div class="input-group">
-        <input type="text" name="loginUser" id="loginUser" required>
+        <input type="text" name="username" id="username" required>
         <label for="loginUser">User Name</label>
       </div>
       <div class="input-group">
-        <input type="password" name="loginPassword" id="loginPassword" required>
+        <input type="password" name="password" id="password" required>
         <label for="loginPassword">Password</label>
       </div>
-      <input type="submit" value="Login" class="submit-btn">
-      <a href="#forgot-pw" class="forgot-pw">Forgot Password?</a>
+      
+      <button class="btn btn-success" name="submit">Login</button>
+      <p class="message">Not Registered?<a href="register.html">Register</a></p>
     </form>
   </div>
   <script src="js/jquery-3.6.1.min.js"></script>
@@ -66,3 +64,34 @@
 </body>
 
 </html>
+
+
+<?php
+$server_name="localhost";
+$username="root";
+$password="";
+$database_name="register";
+
+$conn=mysqli_connect($server_name,$username,$password,$database_name);
+
+if(isset($_POST['submit']))
+{
+    
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+
+    if(!empty($username) && !empty($password)){
+        $sql = "SELECT * FROM information WHERE username = '$username' AND password = '$password'";
+        $query = $conn->query($sql);
+
+        if($query->num_rows > 0){
+            header('location:joblist.html');
+        }
+        else{
+            echo ' <script type="text/javascript"> alert("Not Registered Yet !!")</script> ' ;
+        }
+    }
+}
+
+?>

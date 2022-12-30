@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Job Portal</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/joblist.css">
 </head>
 
 <body>
@@ -21,8 +21,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="applyjob.php">Apply</a>
+              </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
@@ -30,57 +33,13 @@
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.html">Register</a>
+              <a class="nav-link active" href="joblist.html">Job List</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <div id="main-content" class="container">
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="4000">
-          <img src="img/pic1.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>No 1 Company</h5>
-            <p>Get your job now</p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img src="img/pic2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Easy Fast Secure</h5>
-            <p>Easy searching, Fast outcome and Secure</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/pic3.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Choice is yours</h5>
-            <p>Choose your job as you wish</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
   <div class="search-wrapper">
     <div class="search-box">
       <div class="search-card">
@@ -141,6 +100,9 @@
         <a class="label-a" href="#">HTML</a>
         <a class="label-b" href="#">CSS</a>
         <a class="label-c" href="#">JAVA SCRIPT</a>
+        <div class="apply_btn_box">
+            <button class="apply_button"><a class="apply_btn" href="applyjob.html">Apply</a></button>
+        </div>
        </div>
        <div class="job-posted">
         Posted 2 minutes ago
@@ -159,6 +121,9 @@
         <a class="label-a" href="#">HTML</a>
         <a class="label-b" href="#">CSS</a>
         <a class="label-c" href="#">JAVA SCRIPT</a>
+        <div class="apply_btn_box">
+            <button class="apply_button"><a class="apply_btn" href="applyjob.html">Apply</a></button>
+        </div>
        </div>
        <div class="job-posted">
         Posted 1 hours ago
@@ -177,18 +142,102 @@
         <a class="label-a" href="#">HTML</a>
         <a class="label-b" href="#">CSS</a>
         <a class="label-c" href="#">JAVA SCRIPT</a>
+        <div class="apply_btn_box">
+            <button class="apply_button"><a class="apply_btn" href="applyjob.html">Apply</a></button>
+        </div>
        </div>
        <div class="job-posted">
         Posted 6 hours ago
        </div>
     </div>
-    <div class="apply_btn_box" style="text-align: center;">
-      <button class="apply_button"><a class="apply_btn" href="login.html">See more...>></a></button>
-  </div>
+    <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="img/Apple.png" alt="">
+          <div class="job-detail">
+            <h4>Apple</h4>
+            <h3>UI Designer</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, aut exercitationem provident nobis officiis ut quibusdam earum placeat, delectus nesciunt eaque voluptates?</p>
+          </div>
+        </div>
+         <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">JAVA SCRIPT</a>
+          <div class="apply_btn_box">
+            <button class="apply_button"><a class="apply_btn" href="applyjob.html">Apply</a></button>
+        </div>
+         </div>
+         <div class="job-posted">
+          Posted 1 day ago
+         </div>
+      </div>
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="img/Bangladesh-Bank-logo.jpg" alt="">
+          <div class="job-detail">
+            <h4>Bangladesh Bank</h4>
+            <h3>Accountant</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, aut exercitationem provident nobis officiis ut quibusdam earum placeat, delectus nesciunt eaque voluptates?</p>
+          </div>
+        </div>
+         <div class="job-label">
+          <a class="label-a" href="#">BBA</a>
+          <a class="label-b" href="#">MBA</a>
+          <a class="label-c" href="#">Accounting</a>
+          <div class="apply_btn_box">
+            <button class="apply_button"><a class="apply_btn" href="applyjob.html">Apply</a></button>
+        </div>
+         </div>
+         <div class="job-posted">
+          Posted 3 days ago
+         </div>
+      </div>
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="img/10-min-school.jpg" alt="">
+          <div class="job-detail">
+            <h4>10 Min School</h4>
+            <h3>English Lecturer</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus,Necessitatibus aut exercitationem provident nobis eligendi blanditiis quas aliquam officiis ut quibusdam earum placeat, delectus nesciunt eaque voluptates? Ut minus in voluptate!</p>
+          </div>
+        </div>
+         <div class="job-label">
+          <a class="label-a" href="#">Bachelor in English</a>
+          <a class="label-b" href="#">Masters in English</a>
+          <a class="label-c" href="#">Requirement</a>
+          <div class="apply_btn_box">
+            <button class="apply_button"><a class="apply_btn" href="applyjob.html">Apply</a></button>
+        </div>
+         </div>
+         <div class="job-posted">
+          Posted 5 days ago
+         </div>
+      </div>
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="img/fashion_logo.png" alt="">
+          <div class="job-detail">
+            <h4>Fashion House</h4>
+            <h3>Fashion Designer</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum, dolor adipisicing elit. Necessitatibus, aut exercitationem provident nobis eligendi blanditiis quas aliquam officiis ut quibusdam earum placeat, delectus nesciunt eaque voluptates? Ut minus in voluptate!</p>
+          </div>
+        </div>
+         <div class="job-label">
+          <a class="label-a" href="#">Requirement</a>
+          <a class="label-b" href="#">Requirement</a>
+          <a class="label-c" href="#">Requirement</a>
+          <div class="apply_btn_box">
+            <button class="apply_button"><a class="apply_btn" href="applyjob.html">Apply</a></button>
+        </div>
+         </div>
+         <div class="job-posted">
+          Posted 1 week ago
+         </div>
+      </div>
   </section>
   <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/joblist.js"></script>
 </body>
 
 </html>

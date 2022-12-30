@@ -15,6 +15,16 @@ body {
     background-color: #464646;
 }
 
+a {
+    text-align: center;
+}
+
+.navbar-nav .nav-item a:hover{
+    background: linear-gradient(135deg, #5d0872, #a38753);
+    border: 1px solid black;
+    color: white;
+}
+
 .nav2 {
 
     width: 100%;
@@ -186,7 +196,7 @@ body {
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 2rem;
-    color: #ff652f;
+    color: #f3ece9;
 }
 
 .form .input-group {
@@ -228,7 +238,7 @@ body {
     margin-left: auto;
     border: none;
     outline: none;
-    background: #ff652f;
+    background: #d4c6c1;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
